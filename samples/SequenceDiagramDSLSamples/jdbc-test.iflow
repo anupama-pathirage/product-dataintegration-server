@@ -1,0 +1,19 @@
+@startuml
+
+participant ServiceInbound : InboundEndpoint(protocol("http"),port("8290"),context("/dbtest"))
+
+participant ServicePipeline : Pipeline("JDBC_TEST")
+
+participant MYSQLDB : OutboundEndpoint(protocol("DATASOURCE_JDBC"))
+
+ServiceInbound -> ServicePipeline : "client request"
+
+ServicePipeline::log("Before Send the DB Call")
+ServicePipeline -> MYSQLDB : "Request to DB"
+MYSQLDB -> ServicePipeline : "Response from DB"
+ServicePipeline::log("After DB Call")
+
+ServicePipeline -> ServiceInbound : "Final Response"
+
+
+@enduml

@@ -93,6 +93,28 @@
                 <type>zip</type>
             </dependency>
             <dependency>
+                <groupId>org.wso2.carbon.data.iserver.datasources</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.datasources.jdbc</artifactId>
+                <version>${carbon.gw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.data.iserver.datasources</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.datasources.jdbc.feature</artifactId>
+                <version>${carbon.gw.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.data.iserver.datasources</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.datasources.csv</artifactId>
+                <version>${carbon.gw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.data.iserver.datasources</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.datasources.csv.feature</artifactId>
+                <version>${carbon.gw.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>org.osgi.core</artifactId>
                 <version>${osgi.api.version}</version>
@@ -178,5 +200,7 @@
     <modules>
         <module>product</module>
         <module>samples</module>
+        <module>dis-mediators</module>
+        <module>dis-datasources</module>
     </modules>
 </project>
