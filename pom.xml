@@ -161,6 +161,7 @@
         <!-- Maven plugins -->
         <maven.checkstyleplugin.version>2.16</maven.checkstyleplugin.version>
         <maven.findbugsplugin.version>3.0.3</maven.findbugsplugin.version>
+        <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
 
         <!-- Dependencies -->
         <carbon.kernel.version>5.0.0</carbon.kernel.version>
