@@ -86,6 +86,12 @@
             <type>zip</type>
         </dependency>
         <dependency>
+            <groupId>org.wso2.carbon.datasources</groupId>
+            <artifactId>org.wso2.carbon.datasource.core.feature</artifactId>
+            <version>1.0.0-alpha</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.carbon.data.iserver.datasources</groupId>
             <artifactId>org.wso2.carbon.data.iserver.datasources.jdbc.feature</artifactId>
             <version>${carbon.gw.version}</version>
@@ -96,6 +102,16 @@
             <artifactId>org.wso2.carbon.data.iserver.datasources.csv.feature</artifactId>
             <version>${carbon.gw.version}</version>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.data.iserver.coreservices</groupId>
+            <artifactId>org.wso2.carbon.data.iserver.core.feature</artifactId>
+            <version>${carbon.gw.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.wso2</groupId>
+            <artifactId>jdbc-pool</artifactId>
         </dependency>
     </dependencies>
 
@@ -163,6 +179,10 @@
                                     <version>${carbon.messaging.version}</version>
                                 </feature>
                                 <feature>
+                                    <id>org.wso2.carbon.datasource.core.feature</id>
+                                    <version>${carbon.datasources.version}</version>
+                                </feature>
+                                <feature>
                                     <id>org.wso2.carbon.gateway.inbounds.http.feature</id>
                                     <version>${carbon.gw.version}</version>
                                 </feature>
@@ -174,10 +194,14 @@
                                     <id>org.wso2.carbon.data.iserver.datasources.jdbc.feature</id>
                                     <version>${carbon.gw.version}</version>
                                 </feature>
-                                <!--<feature>
+                                <feature>
                                     <id>org.wso2.carbon.data.iserver.datasources.csv.feature</id>
                                     <version>${carbon.gw.version}</version>
-                                </feature>-->
+                                </feature>
+                                <feature>
+                                    <id>org.wso2.carbon.data.iserver.core.feature</id>
+                                    <version>${carbon.gw.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>
@@ -246,6 +270,10 @@
                                     <id>org.wso2.carbon.messaging.feature.group</id>
                                     <version>${carbon.messaging.version}</version>
                                 </feature>
+                                <!--<feature>
+                                    <id>org.wso2.carbon.datasource.feature.group</id>
+                                    <version>${carbon.datasources.version}</version>
+                                </feature>-->
                                 <feature>
                                     <id>org.wso2.carbon.gateway.inbounds.http.feature</id>
                                     <version>${carbon.gw.version}</version>
@@ -258,10 +286,14 @@
                                     <id>org.wso2.carbon.data.iserver.datasources.jdbc.feature</id>
                                     <version>${carbon.gw.version}</version>
                                 </feature>
-                                <!--<feature>
+                                <feature>
                                     <id>org.wso2.carbon.data.iserver.datasources.csv.feature</id>
                                     <version>${carbon.gw.version}</version>
-                                </feature>-->
+                                </feature>
+                                <feature>
+                                    <id>org.wso2.carbon.data.iserver.core.feature</id>
+                                    <version>${carbon.gw.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>

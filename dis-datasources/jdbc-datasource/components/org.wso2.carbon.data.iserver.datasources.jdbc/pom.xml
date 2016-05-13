@@ -63,8 +63,24 @@
             <artifactId>org.wso2.carbon.gateway.core</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.wso2.carbon.data.iserver.coreservices</groupId>
+            <artifactId>org.wso2.carbon.data.iserver.core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.carbon.messaging</groupId>
             <artifactId>org.wso2.carbon.messaging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.datasources</groupId>
+            <artifactId>org.wso2.carbon.datasource.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.datasources</groupId>
+            <artifactId>org.wso2.carbon.datasource.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.wso2</groupId>
+            <artifactId>jdbc-pool</artifactId>
         </dependency>
     </dependencies>
 
@@ -79,10 +95,15 @@
             org.sample.dsl.*;version="1.0.0",
             org.wso2.carbon.gateway.core.config.dsl.internal.*,
             org.wso2.carbon.gateway.core.*,
+            org.wso2.carbon.data.iserver.core.*,
             org.slf4j.*;version="${slf4j.logging.package.import.version.range}",
-            org.wso2.carbon.messaging
+            org.wso2.carbon.messaging,
+            org.wso2.carbon.datasource.core.*,
+            org.wso2.carbon.datasource.rdbms.*,
+            org.wso2.carbon.datasource.utils.*,
+            org.apache.tomcat.jdbc.pool;version="${jdbc-pool.orbit.imp.pkg.version}"
         </import.package>
-
+        <dynamic.import.package>*</dynamic.import.package>
         <osgi.framework.import.version.range>[1.8.0, 2.0.0)</osgi.framework.import.version.range>
     </properties>
 

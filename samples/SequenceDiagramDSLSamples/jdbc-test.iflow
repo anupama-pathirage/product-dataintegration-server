@@ -4,7 +4,7 @@ participant ServiceInbound : InboundEndpoint(protocol("http"),port("8290"),conte
 
 participant ServicePipeline : Pipeline("JDBC_TEST")
 
-participant MYSQLDB : OutboundEndpoint(protocol("DATASOURCE_JDBC"))
+participant MYSQLDB : OutboundEndpoint(protocol("DATASOURCE_JDBC"),dbtype("MYSQL"),username("root"),password("root"),host("localhost"),port("3306"),db("DBTEST"))
 
 ServiceInbound -> ServicePipeline : "client request"
 

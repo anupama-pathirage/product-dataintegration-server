@@ -71,6 +71,17 @@
                 <type>zip</type>
             </dependency>
             <dependency>
+                <groupId>org.wso2.carbon.data.iserver.coreservices</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.core</artifactId>
+                <version>${carbon.gw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.data.iserver.coreservices</groupId>
+                <artifactId>org.wso2.carbon.data.iserver.core.feature</artifactId>
+                <version>${carbon.gw.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
                 <groupId>org.wso2.carbon.gateway.inbounds</groupId>
                 <artifactId>org.wso2.carbon.gateway.inbounds.http</artifactId>
                 <version>${carbon.gw.version}</version>
@@ -154,6 +165,16 @@
                 <artifactId>org.wso2.carbon.core</artifactId>
                 <version>${carbon.kernel.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.datasources</groupId>
+                <artifactId>org.wso2.carbon.datasource.core</artifactId>
+                <version>${carbon.datasources.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.wso2</groupId>
+                <artifactId>jdbc-pool</artifactId>
+                <version>${jdbc-pool.orbit.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -184,9 +205,11 @@
         <carbon.transport.version>2.0.2-SNAPSHOT</carbon.transport.version>
         <carbon.transport.package.import.version.range>[2.0.0, 2.1.0)</carbon.transport.package.import.version.range>
 
-        <carbon.messaging.version>1.0.2</carbon.messaging.version>
+        <carbon.messaging.version>1.0.3-SNAPSHOT</carbon.messaging.version>
+        <carbon.datasources.version>1.0.0-alpha</carbon.datasources.version>
 
         <carbon.messaging.package.import.version.range>[0.0.0, 2.0.0)</carbon.messaging.package.import.version.range>
+        <carbon.datasources.package.import.version.range>[0.0.0, 2.0.0)</carbon.datasources.package.import.version.range>
 
         <osgi.framework.import.version.range>[1.8.0, 2.0.0)</osgi.framework.import.version.range>
         <osgi.service.tracker.import.version.range>[1.5.1, 2.0.0)</osgi.service.tracker.import.version.range>
@@ -196,6 +219,9 @@
 
         <antlr4.runtime.version>4.5.1.wso2v1</antlr4.runtime.version>
         <plugin.version.antlr>4.5.1</plugin.version.antlr>
+
+        <jdbc-pool.orbit.version>7.0.34.wso2v2</jdbc-pool.orbit.version>
+        <jdbc-pool.orbit.imp.pkg.version>[1.7.0,2.0.0)</jdbc-pool.orbit.imp.pkg.version>
     </properties>
 
     <modules>
@@ -203,5 +229,6 @@
         <module>samples</module>
         <module>dis-mediators</module>
         <module>dis-datasources</module>
+        <module>dis-core</module>
     </modules>
 </project>

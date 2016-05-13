@@ -25,27 +25,21 @@ import org.wso2.carbon.gateway.core.outbound.OutboundEndpoint;
 
 /**
  * JDBC Data Source Provider
- *
+ * <p/>
  * This is responsible for providing a jdbc datasource instance to engine
- *
  */
 @Component(
         name = "org.wso2.carbon.data.iserver.datasources.jdbc.JDBCDataSourceProvider",
         immediate = true,
-        service = OutboundEPProvider.class
-)
-public class JDBCDataSourceProvider implements OutboundEPProvider {
-    @Activate
-    protected void start(BundleContext bundleContext) {
+        service = OutboundEPProvider.class) public class JDBCDataSourceProvider implements OutboundEPProvider {
+    @Activate protected void start(BundleContext bundleContext) {
     }
 
-    @Override
-    public String getProtocol() {
+    @Override public String getProtocol() {
         return "DATASOURCE_JDBC";
     }
 
-    @Override
-    public OutboundEndpoint getEndpoint() {
+    @Override public OutboundEndpoint getEndpoint() {
         return new JDBCDataSource();
     }
 }

@@ -26,6 +26,6 @@ import org.wso2.carbon.data.iserver.datasources.jdbc.JDBCDataSource;
 public class JDBCDataSourceBuilder {
 
     public static JDBCDataSource jdbcDataSource() {
-        return  new JDBCDataSource();
+        return new JDBCDataSource();
     }
 }
